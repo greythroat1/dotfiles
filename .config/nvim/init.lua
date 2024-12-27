@@ -45,6 +45,7 @@ set.smartcase = true
 set.termguicolors = true
 set.showmode = false
 
+
 -- ======================= --
 -- ===     PLUGINS 	   === --
 -- ======================= --
@@ -54,14 +55,11 @@ require "paq" {
     "savq/paq-nvim", 
 	
 	--Themes
-  	"itchyny/lightline.vim",
+	"itchyny/lightline.vim",
   	"AhmedAbdulrahman/vim-aylin",
   	"ntk148v/vim-horizon",
-  	"krfl/fleetish-vim",
 	"sainnhe/sonokai",
-
-	--Floating terminal
-	"voldikss/vim-floaterm",
+	"catppuccin/nvim",
 
 	--Syntax highlighting
 	"sheerun/vim-polyglot",
@@ -79,10 +77,11 @@ vim.g['lightline'] = {
 }
 
 -- Colorscheme
-vim.g['sonokai_style'] = 'andromeda'
-vim.g['sonokai_better_performance'] = 1
-cmd("colorscheme sonokai")
+-- vim.g['sonokai_style'] = 'andromeda'
+-- vim.g['sonokai_better_performance'] = 1
+cmd("colorscheme horizon")
 
+-- YAML Front Matter Highlighting
 vim.g['vim_markdown_frontmatter'] = 1
 
 -- ======================= --
@@ -98,12 +97,4 @@ bind('v', '<leader>d', '"+d')
 
 -- Paste from clipboard
 bind('n', '<leader>p', '"+p')
-
--- Floaterm binding
-vim.g['floaterm_keymap_new']			= '<A-t>' 
-vim.g['floaterm_keymap_kill']			= '<A-q>'
-vim.g['floaterm_keymap_prev']			= '<A-N>'
-vim.g['floaterm_keymap_next']			= '<A-n>'
-vim.g['floaterm_keymap_toggle']			= '<A-h>'
-user_cmd('RN', 'FloatermNew ranger', {})
 

@@ -13,6 +13,9 @@ setopt automenu
 autoload -U compinit 
 compinit
 
+### Allow to execute python app (ex: jupyter-lab)
+PATH=${PATH}:$HOME/.local/bin
+
 ### Plugin > using antigen
 source $HOME/antigen.zsh
 
@@ -43,5 +46,5 @@ alias "v"="nvim"
 alias "rn"="ranger"
 
 ### Program when opening shell
-neofetch
+fastfetch
 
