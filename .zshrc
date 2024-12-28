@@ -4,11 +4,10 @@ HISTSIZE=5000
 SAVEHIST=5000
 
 ### Options
-setopt autocd 
 setopt nomatch
+setopt nobeep
 setopt notify
-unsetopt menucomplete
-setopt automenu
+setopt nomenucomplete
 
 autoload -U compinit 
 compinit
@@ -18,9 +17,6 @@ PATH=${PATH}:$HOME/.local/bin
 
 ### Plugin > using antigen
 source $HOME/antigen.zsh
-
-## antigen use oh-my-zsh
-## antigen theme https://github.com/tobyjamesthomas/pi.git pi
 
 antigen bundle reobin/typewritten@main
 antigen bundle zsh-users/zsh-completions
@@ -47,4 +43,3 @@ alias "rn"="ranger"
 
 ### Program when opening shell
 fastfetch
-

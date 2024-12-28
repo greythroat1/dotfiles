@@ -6,12 +6,6 @@
 -- Setting variable
 local set = vim.opt
 
--- Command variable
-local cmd = vim.cmd
-
--- User command variable
-local user_cmd = vim.api.nvim_create_user_command 
-
 -- Keymap variable
 local bind = vim.keymap.set
 
@@ -70,16 +64,14 @@ require "paq" {
 -- ===     THEMING     === --
 -- ======================= --
 
--- Option: aylin, horizon, fleetish, sonokai
+-- Option: aylin, horizon , sonokai, catppuccin
 -- Tabline
-vim.g['lightline'] = {
-	colorscheme = 'sonokai'
-}
+vim.g['lightline'] = {colorscheme = 'aylin'}
 
 -- Colorscheme
 -- vim.g['sonokai_style'] = 'andromeda'
 -- vim.g['sonokai_better_performance'] = 1
-cmd("colorscheme horizon")
+vim.cmd("colorscheme aylin")
 
 -- YAML Front Matter Highlighting
 vim.g['vim_markdown_frontmatter'] = 1
@@ -91,10 +83,7 @@ vim.g['vim_markdown_frontmatter'] = 1
 -- Leader key
 vim.g.mapleader = ' '
 
--- Copy & cut into clipboard
+-- Copy, cut & paste globally
 bind('v', '<leader>y', '"+y')
 bind('v', '<leader>d', '"+d')
-
--- Paste from clipboard
 bind('n', '<leader>p', '"+p')
-
