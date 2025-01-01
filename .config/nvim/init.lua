@@ -51,7 +51,6 @@ require "paq" {
 	--Themes
 	"itchyny/lightline.vim",
   	"AhmedAbdulrahman/vim-aylin",
-  	"ntk148v/vim-horizon",
 	"sainnhe/sonokai",
 	"catppuccin/nvim",
 
@@ -64,7 +63,7 @@ require "paq" {
 -- ===     THEMING     === --
 -- ======================= --
 
--- Option: aylin, horizon , sonokai, catppuccin
+-- Option: aylin, sonokai, catppuccin
 -- Tabline
 vim.g['lightline'] = {colorscheme = 'aylin'}
 
