@@ -9,11 +9,11 @@ setopt nobeep
 setopt notify
 setopt nomenucomplete
 
-autoload -U compinit 
-compinit
-
 ### Allow to execute python app (ex: jupyter-lab)
 PATH=${PATH}:$HOME/.local/bin
+
+### Default
+export EDITOR='nvim'
 
 ### Plugin > using antigen
 source $HOME/antigen.zsh
@@ -38,8 +38,8 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 ### Aliases
+alias "ls"="eza --icons"
 alias "v"="nvim"
-alias "rn"="ranger"
 
 ### Program when opening shell
 fastfetch
