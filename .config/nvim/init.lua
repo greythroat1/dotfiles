@@ -18,10 +18,6 @@ local bind = vim.keymap.set
 set.number = true
 set.relativenumber = true
 
--- Spacing
-set.tabstop = 4
-set.shiftwidth = 4
-
 -- Text
 set.wrap = false
 set.scrolloff = 5
@@ -46,16 +42,15 @@ set.showmode = false
 
 -- Using paq plugin
 require "paq" {
-    "savq/paq-nvim", 
-	
-	--Themes
-	"itchyny/lightline.vim",
-  	"AhmedAbdulrahman/vim-aylin",
-	"sainnhe/sonokai",
-	"catppuccin/nvim",
+    "savq/paq-nvim",
 
-	--Syntax highlighting
-	"sheerun/vim-polyglot",
+		--Themes
+		"itchyny/lightline.vim",
+		"AhmedAbdulrahman/vim-aylin",
+		"sainnhe/sonokai",
+
+		--Syntax highlighting
+		"sheerun/vim-polyglot",
 }
 
 
@@ -63,7 +58,7 @@ require "paq" {
 -- ===     THEMING     === --
 -- ======================= --
 
--- Option: aylin, sonokai, catppuccin
+-- Option: aylin or sonokai
 -- Tabline
 vim.g['lightline'] = {colorscheme = 'aylin'}
 

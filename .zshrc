@@ -8,6 +8,10 @@ setopt nomatch
 setopt nobeep
 setopt notify
 setopt nomenucomplete
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
 
 ### Allow to execute python app (ex: jupyter-lab)
 PATH=${PATH}:$HOME/.local/bin
@@ -21,8 +25,8 @@ source $HOME/antigen.zsh
 antigen bundle reobin/typewritten@main
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
