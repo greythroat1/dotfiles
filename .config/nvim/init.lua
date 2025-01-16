@@ -1,40 +1,23 @@
 -- ======================= --
--- ===    VARIABLES    === --
--- ======================= --
-
--- Add variables for easy use
--- Setting variable
-local set = vim.opt
-
--- Keymap variable
-local bind = vim.keymap.set
-
-
--- ======================= --
 -- ===    SETTINGS     === --
 -- ======================= --
  
 -- Line number
-set.number = true
-set.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Text
-set.wrap = false
-set.scrolloff = 5
-set.sidescrolloff = 5
-
--- Window
-set.splitright = true
-set.splitbelow = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 5
 
 -- Searching
-set.ignorecase = true
-set.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Theming
-set.termguicolors = true
-set.showmode = false
-
+vim.opt.termguicolors = true
+vim.opt.showmode = false
 
 -- ======================= --
 -- ===     PLUGINS 	   === --
@@ -44,15 +27,14 @@ set.showmode = false
 require "paq" {
     "savq/paq-nvim",
 
-		--Themes
-		"itchyny/lightline.vim",
-		"AhmedAbdulrahman/vim-aylin",
-		"sainnhe/sonokai",
+    --Themes
+    "itchyny/lightline.vim",
+    "AhmedAbdulrahman/vim-aylin",
+    "sainnhe/sonokai",
 
-		--Syntax highlighting
-		"sheerun/vim-polyglot",
+    --Syntax highlighting
+    "sheerun/vim-polyglot",
 }
-
 
 -- ======================= --
 -- ===     THEMING     === --
@@ -78,6 +60,6 @@ vim.g['vim_markdown_frontmatter'] = 1
 vim.g.mapleader = ' '
 
 -- Copy, cut & paste globally
-bind('v', '<leader>y', '"+y')
-bind('v', '<leader>d', '"+d')
-bind('n', '<leader>p', '"+p')
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('v', '<leader>d', '"+d')
+vim.keymap.set('n', '<leader>p', '"+p')

@@ -1,49 +1,49 @@
-### Command history
+# History
 HISTFILE=~/.zsh-histfile
 HISTSIZE=5000
 SAVEHIST=5000
 
-### Options
+# Options
 setopt nomatch
 setopt nobeep
 setopt notify
-setopt nomenucomplete
+setopt no_menu_complete
+setopt no_case_glob
+setopt no_case_match
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
+setopt hist_ignore_space
 setopt hist_save_no_dups
 setopt hist_find_no_dups
 
-### Allow to execute python app (ex: jupyter-lab)
+# Environments
 PATH=${PATH}:$HOME/.local/bin
 
-### Default
+# Defaults
 export EDITOR='nvim'
 
-### Plugin > using antigen
+# Plugins > using antigen
 source $HOME/antigen.zsh
 
 antigen bundle reobin/typewritten@main
-antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
 
-# Prompt customization 
+## Prompt customization 
 TYPEWRITTEN_RELATIVE_PATH="home"
-TYPEWRITTEN_CURSOR="terminal"
 
-# Highlight on completion
+# Highlight on tab completion
 zstyle ':completion:*' menu select
 
-# Keybind for history
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# Keybinds for history
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
-### Aliases
+# Aliases
 alias "ls"="eza --icons"
 alias "v"="nvim"
 
-### Program when opening shell
+# Program when opening shell
 fastfetch
