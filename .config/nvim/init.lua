@@ -16,7 +16,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Theming
-vim.opt.termguicolors = true
 vim.opt.showmode = false
 
 -- ======================= --
