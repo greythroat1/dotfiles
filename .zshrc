@@ -22,19 +22,19 @@ PATH=${PATH}:$HOME/.local/bin
 # Defaults
 export EDITOR='nvim'
 
-# Plugins > using antigen
-source $HOME/antigen.zsh
+# Plugins
+fpath+=$HOME/.zsh/typewritten
+autoload -U promptinit; promptinit
+prompt typewritten
 
-antigen bundle reobin/typewritten@main
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
+source /home/stretch/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/stretch/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-antigen apply
-
-## Prompt customization 
+# Prompt customization 
 TYPEWRITTEN_RELATIVE_PATH="home"
 
 # Highlight on tab completion
+autoload -U compinit; compinit
 zstyle ':completion:*' menu select
 
 # Keybinds for history
